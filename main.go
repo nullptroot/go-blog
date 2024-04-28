@@ -1,15 +1,24 @@
 package main
 
 import (
-	"fmt"
 	"go-blog/core"
+	"go-blog/flag"
 	"go-blog/global"
+	"go-blog/routers"
 )
 
 func main() {
-	// 读取配置文件
 	core.InitConf()
-	fmt.Println(global.Config)
-	global.DB = core.InitGorm()
-	fmt.Println(global.DB)
+	core.InitLogger()
+	core.InitGorm()
+	option := flag.Parse()
+	global.Log.Info(option.DB)
+	if flag.IsWebStop(option) {
+		flag.SwitchOption(option)
+		return
+	}
+	router := routers.InitRouter()
+	addr := global.Config.System.Addr()
+	global.Log.Infof("Listening on : %s\n", addr)
+	router.Run(addr)
 }

@@ -42,5 +42,6 @@ func InitGorm() *gorm.DB {
 	// 最大连接时间
 	sqlDB.SetConnMaxLifetime(time.Hour * 4)
 	global.DB = db
+	global.Log.Info("mysql连接成功")
 	return db
 }
