@@ -12,6 +12,13 @@ type RouterGroup struct {
 }
 
 func InitRouter() *gin.Engine {
+	// global.ViewMaps = map[string]any{
+	// 	"site":  &global.Config.SiteInfo,
+	// 	"email": &global.Config.Email,
+	// 	"qq":    &global.Config.QQ,
+	// 	"qiniu": &global.Config.QiNiu,
+	// 	"jwt":   &global.Config.Jwt,
+	// }
 	gin.SetMode(global.Config.System.Env)
 	router := gin.Default()
 	// 路由分组  也就是url都已api开头的/api/*
