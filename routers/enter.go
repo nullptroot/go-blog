@@ -24,7 +24,9 @@ func InitRouter() *gin.Engine {
 	// 路由分组  也就是url都已api开头的/api/*
 	apiRouterGroup := router.Group("api")
 	routerGroupApp := RouterGroup{apiRouterGroup}
-
+	// 设置配置信息相关路由
 	routerGroupApp.SettingsRouter()
+	// 设置图片相关的路由
+	routerGroupApp.ImagesRouter()
 	return router
 }
