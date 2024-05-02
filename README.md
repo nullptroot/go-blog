@@ -11,6 +11,19 @@
     2. image_remove 删除图片的接口
     3. iamge_update 更新图片名称的接口
     4. iamge_uoload 上传图片的接口，可以实现本地上传或者上传到七牛云
+    5. image_name_list 返回图片名称列表
+3. adverts_api 负责广告的相关接口
+    1. advert_create 创建广告
+    2. advert_list 返回广告列表
+    3. advert_remove 删除广告
+    4. advert_update 更新广告信息
+4. menu_api 菜单相关的接口
+    1. menu_create 创建菜单
+    2. menu_detail 菜单的细节
+    3. menu_list 返回菜单的列表
+    4. menu_name_list 返回菜单名称列表
+    5. menu_remove 删除菜单
+    6. menu_update 更新菜单信息
 ### config
 
 存放记录配置的结构体目录，主要是根据配置文件的结构信息，创建的结构体，直接用来序列化读取的，主要分为三个结构体：
@@ -30,7 +43,11 @@
 
 swag生成的api文档目录
 
-目前已经对广告管理和图片管理进行了api文档生成
+已完成api接口文档：
+1. 广告管理
+2. 图片管理
+3. 菜单管理
+4. 配置管理
 ### flag
 
 命令行相关的初始化，目前有一个数据库迁移
