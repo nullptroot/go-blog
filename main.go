@@ -2,11 +2,17 @@ package main
 
 import (
 	"go-blog/core"
+	_ "go-blog/docs"
 	"go-blog/flag"
 	"go-blog/global"
 	"go-blog/routers"
 )
 
+// @title gvb-blog文档
+// @version 1.0
+// @description API文档
+// @host 10.0.0.3:8080
+// @BasePath /
 func main() {
 	// 初始化基础信息
 	core.InitConf()

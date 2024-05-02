@@ -1,6 +1,7 @@
 package api
 
 import (
+	advertapi "go-blog/api/advert_api"
 	imagesapi "go-blog/api/images_api"
 	"go-blog/api/settings_api"
 )
@@ -9,8 +10,10 @@ import (
 type ApiGroup struct {
 	// SettingsApi实现了SettingsInfoView的方法，供其gin注册路由，
 	SettingsApi settings_api.SettingsApi
-
+	// 图片相关的接口
 	ImagesApi imagesapi.ImagesApi
+	// 广告相关的接口
+	AdvertApi advertapi.AdvertApi
 }
 
 // 这个用来取得SettingsApi 来给gin设置路由handler的

@@ -11,7 +11,18 @@ import (
 	"github.com/gin-gonic/gin"
 )
 
+//下面有个上传文件的参数写法
+
 // ImageUploadView 上传单个图片，返回图片的url
+// ImageUploadView 上传图片
+// @Tags 图片管理
+// @Summary 上传图片
+// @Description 上传图片
+// @Param data formData file   true  "上传的图片文件"
+// @Param token header string  true  "token"
+// @Router /api/images [post]
+// @Produce json
+// @Success 200 {object} res.Response{data=imageser.FileUploadResponse}
 func (ImagesApi) ImageUploadView(c *gin.Context) {
 	// 上传多个图片，MultipartForm分析多个上传
 	form, err := c.MultipartForm()
