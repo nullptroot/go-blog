@@ -36,5 +36,7 @@ func InitRouter() *gin.Engine {
 	routerGroupApp.ImagesRouter()
 	// 设置广告相关的路由
 	routerGroupApp.AdvertRouter()
+	// 设置菜单相关的路由
+	routerGroupApp.MenuRouter()
 	return router
 }

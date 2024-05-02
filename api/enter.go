@@ -3,6 +3,7 @@ package api
 import (
 	advertapi "go-blog/api/advert_api"
 	imagesapi "go-blog/api/images_api"
+	menuapi "go-blog/api/menu_api"
 	"go-blog/api/settings_api"
 )
 
@@ -14,6 +15,8 @@ type ApiGroup struct {
 	ImagesApi imagesapi.ImagesApi
 	// 广告相关的接口
 	AdvertApi advertapi.AdvertApi
+	// 菜单管理相关的接口
+	MenuApi menuapi.MenuApi
 }
 
 // 这个用来取得SettingsApi 来给gin设置路由handler的
