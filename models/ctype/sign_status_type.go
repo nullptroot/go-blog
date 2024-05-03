@@ -7,7 +7,7 @@ type SignStatus int
 const (
 	SignQQ    SignStatus = 1 // QQ
 	SignGitee SignStatus = 2 //Gitee
-	SigEmail  SignStatus = 3 //Email
+	SignEmail SignStatus = 3 //Email
 )
 
 func (s SignStatus) MarshalJSON() ([]byte, error) {
@@ -21,7 +21,7 @@ func (s SignStatus) String() string {
 		str = "QQ"
 	case SignGitee:
 		str = "Gitee"
-	case SigEmail:
+	case SignEmail:
 		str = "Email"
 	default:
 		str = "其他"

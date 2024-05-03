@@ -38,5 +38,9 @@ func InitRouter() *gin.Engine {
 	routerGroupApp.AdvertRouter()
 	// 设置菜单相关的路由
 	routerGroupApp.MenuRouter()
+	// 设置登录相关的路由
+	routerGroupApp.UserRouter()
+	// 设置标签相关路由
+	routerGroupApp.TagRouter()
 	return router
 }

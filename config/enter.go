@@ -13,6 +13,7 @@ type Config struct {
 	QQ       QQ       `yaml:"qq"`
 	QiNiu    QiNiu    `yaml:"qiniu"`
 	Jwt      Jwt      `yaml:"jwt"`
+	Redis    Redis    `yaml:"redis`
 }
 
 func (s System) Addr() string {
