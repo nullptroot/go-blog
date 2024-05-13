@@ -22,6 +22,8 @@ func main() {
 	core.InitGorm()
 	// 初始化redis
 	global.Redis = core.ConnectRedis()
+	// 初始化es
+	global.ESClient = core.EsConnect()
 	// 获取命令行参数
 	option := flag.Parse()
 	// global.Log.Info(option.DB)

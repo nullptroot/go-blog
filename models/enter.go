@@ -20,3 +20,7 @@ type PageInfo struct {
 	Limit int    `form:"limit"` // 一页限制多少记录
 	Sort  string `form:"sort"`  // 排序字段
 }
+
+type ESIDRequest struct {
+	ID string `json:"id" form:"id" uri:"id"`
+}

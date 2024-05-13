@@ -14,6 +14,7 @@ type Config struct {
 	QiNiu    QiNiu    `yaml:"qiniu"`
 	Jwt      Jwt      `yaml:"jwt"`
 	Redis    Redis    `yaml:"redis`
+	Es       Es       `yaml:"es`
 }
 
 func (s System) Addr() string {

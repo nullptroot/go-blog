@@ -42,5 +42,11 @@ func InitRouter() *gin.Engine {
 	routerGroupApp.UserRouter()
 	// 设置标签相关路由
 	routerGroupApp.TagRouter()
+	// 设置消息相关的路由
+	routerGroupApp.MessageRouter()
+	// 文章相关的路由
+	routerGroupApp.ArticleRouter()
+	// 点赞相关的接口
+	routerGroupApp.DiggRouter()
 	return router
 }

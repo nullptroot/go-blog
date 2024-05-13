@@ -25,7 +25,7 @@ func (MessageApi) MessageCreateView(c *gin.Context) {
 		return
 	}
 	var senUser, recvUser models.UserModel
-
+	// 验证消息双方用户是否都存在
 	err = global.DB.Take(&senUser, cr.SendUserID).Error
 	if err != nil {
 		res.FailWithMessage("发送人不存在", c)
@@ -36,7 +36,7 @@ func (MessageApi) MessageCreateView(c *gin.Context) {
 		res.FailWithMessage("接收人不存在", c)
 		return
 	}
-
+	// 入库
 	err = global.DB.Create(&models.MessageModel{
 		SendUserID:       cr.SendUserID,
 		SendUserNickName: senUser.NickName,

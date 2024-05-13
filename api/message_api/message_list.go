@@ -25,6 +25,7 @@ type Message struct {
 type MessageGroup map[uint]*Message
 
 func (MessageApi) MessageListView(c *gin.Context) {
+	// 获取当前用户token的信息
 	_claims, _ := c.Get("claims")
 	claims := _claims.(*jwts.CustomClaims)
 
